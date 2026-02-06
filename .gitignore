@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+dist/
+*.app
+*.dSYM
+
+# System files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.user
+*.mode1v3
+*.pbxuser
+*.xcuserstate
+xcuserdata/
+
+# Swift/Xcode
+.swiftpm/
+.build/
+Package.resolved
