@@ -18,8 +18,19 @@ Konekin is a macOS menu bar application that simplifies reverse tethering for An
 ## Prerequisites
 
 - macOS 11.0 or later.
-- Android device with **USB Debugging** enabled.
+- Android device.
 - USB cable.
+
+## Android Setup
+
+To make your device detectable by Konekin, you must enable **USB Debugging**:
+
+1.  Open **Settings** on your Android device.
+2.  Go to **About Phone**.
+3.  Find **Build Number** and tap it **7 times** until you see "You are now a developer!".
+4.  Go back to **System** > **Developer Options** (or search for it in Settings).
+5.  Enable **USB Debugging**.
+6.  Connect your device to your Mac and **Authorize** the computer when prompted on the phone.
 
 ## Installation & Build
 
