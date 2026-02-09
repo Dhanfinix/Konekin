@@ -18,15 +18,26 @@ mkdir -p "${RESOURCES_DIR}"
 # Create PkgInfo
 echo "APPL????" > "${CONTENTS_DIR}/PkgInfo"
 
-# Compile Swift files
-swiftc -o "${MACOS_DIR}/${APP_NAME}" \
-    main.swift \
-    AppDelegate.swift \
-    GnirehtetManager.swift \
-    TutorialWindow.swift \
-    NotificationManager.swift \
-    -sdk $(xcrun --show-sdk-path --sdk macosx) \
-    -target arm64-apple-macosx11.0
+# Compile Swift files for each architecture
+echo "Compiling for arm64..."
+swiftc -o "${MACOS_DIR}/${APP_NAME}_arm64" \
+    main.swift AppDelegate.swift GnirehtetManager.swift TutorialWindow.swift NotificationManager.swift \
+    -sdk $(xcrun --show-sdk-path --sdk macosx) -target arm64-apple-macosx11.0 -O
+
+echo "Compiling for x86_64..."
+swiftc -o "${MACOS_DIR}/${APP_NAME}_x86_64" \
+    main.swift AppDelegate.swift GnirehtetManager.swift TutorialWindow.swift NotificationManager.swift \
+    -sdk $(xcrun --show-sdk-path --sdk macosx) -target x86_64-apple-macosx11.0 -O
+
+# Create Universal Binary using lipo
+echo "Creating Universal Binary..."
+lipo -create -output "${MACOS_DIR}/${APP_NAME}" \
+    "${MACOS_DIR}/${APP_NAME}_arm64" \
+    "${MACOS_DIR}/${APP_NAME}_x86_64"
+
+# Clean up architecture-specific binaries
+rm "${MACOS_DIR}/${APP_NAME}_arm64"
+rm "${MACOS_DIR}/${APP_NAME}_x86_64"
 
 # Copy Info.plist
 cp Info.plist "${CONTENTS_DIR}/"
