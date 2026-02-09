@@ -48,7 +48,7 @@ For the easiest installation, download the latest pre-built version:
 
 1.  Clone the repository:
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Dhanfinix/Konekin
     cd Konekin
     ```
 
