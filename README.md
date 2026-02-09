@@ -32,7 +32,19 @@ To make your device detectable by Konekin, you must enable **USB Debugging**:
 5.  Enable **USB Debugging**.
 6.  Connect your device to your Mac and **Authorize** the computer when prompted on the phone.
 
-## Installation & Build
+## Download
+
+For the easiest installation, download the latest pre-built version:
+
+1.  Go to the [Releases](https://github.com/Dhanfinix/Konekin/releases) page.
+2.  Download the `Konekin_Installer.dmg` file.
+3.  Open the DMG and drag **Konekin** to your **Applications** folder.
+4.  If you see an "App is damaged" error (due to ad-hoc signing), run this in your terminal:
+    ```bash
+    xattr -cr /Applications/Konekin.app
+    ```
+
+## Installation & Build (For Developers)
 
 1.  Clone the repository:
     ```bash

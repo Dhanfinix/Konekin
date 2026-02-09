@@ -127,6 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let quitItem = NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         menu.addItem(quitItem)
         
+        menu.autoenablesItems = false
         statusItem.menu = menu
     }
     
@@ -259,6 +260,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             startItem.title = "Refresh Connection"
             startItem.isEnabled = true 
             startItem.isHidden = false
+            startItem.keyEquivalent = "s"
             
             stopItem.isHidden = false
             stopItem.isEnabled = true
@@ -266,10 +268,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             if devices.isEmpty {
                 startItem.title = "No Android device detected"
                 startItem.isEnabled = false
+                startItem.keyEquivalent = ""
             } else {
                 let model = devices.first(where: { $0.serial == selectedSerial })?.model ?? "Android"
                 startItem.title = "Start on \(model)"
                 startItem.isEnabled = true
+                startItem.keyEquivalent = "s"
             }
             startItem.isHidden = false
             
@@ -284,6 +288,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     @objc private func startGnirehtet() {
+        let devices = manager.getDevices()
+        if !manager.isRunning && devices.isEmpty {
+            return // Safety guard: do not show alert or start if no devices
+        }
+        
         showPrivacyAlert { [weak self] confirmed in
             guard let self = self, confirmed else { return }
             self.performStart()
