@@ -19,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem.button {
-            button.title = "K" // Text fallback
             // Initial load
             if let customImage = NSImage(named: "menubar-icon") {
                  button.image = customImage
