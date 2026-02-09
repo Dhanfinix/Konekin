@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assets/AppIcon.icns" alt="Konekin App Icon" width="128" height="128">
+  <img src="Assets/AppIcon.png" alt="Konekin App Icon" width="128" height="128">
 </p>
 
 # Konekin
