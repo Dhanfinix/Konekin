@@ -14,6 +14,17 @@ Konekin is a macOS menu bar application that simplifies reverse tethering for An
 - **Multi-Device Support**: Select which device to share internet with if multiple are connected.
 - **ADB Management**: Built-in tools to restart or kill the ADB server.
 - **Privacy Awareness**: Includes warnings about network monitoring on public networks.
+- **Modern Aesthetics**: A clean, native macOS experience.
+
+## 📸 Screenshots
+
+| Idle State | Connected State |
+| :---: | :---: |
+| ![Idle State](Assets/idle-state.jpg) | ![Connected State](Assets/connected-state.jpg) |
+
+| Privacy Warning |
+| :---: |
+| ![Privacy Warning](Assets/privacy-warning-dialog.jpg) |
 
 ## Prerequisites
 
