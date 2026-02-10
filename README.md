@@ -18,13 +18,9 @@ Konekin is a macOS menu bar application that simplifies reverse tethering for An
 
 ## 📸 Screenshots
 
-| Idle State | Connected State |
-| :---: | :---: |
-| ![Idle State](Assets/idle-state.jpg) | ![Connected State](Assets/connected-state.jpg) |
-
-| Privacy Warning |
-| :---: |
-| ![Privacy Warning](Assets/privacy-warning-dialog.jpg) |
+| Idle State | Connected State | Privacy Warning |
+| :---: | :---: | :---: |
+| <img src="Assets/idle-state.jpg" height="300"> | <img src="Assets/connected-state.jpg" height="300"> | <img src="Assets/privacy-warning-dialog.jpg" height="300"> |
 
 ## Prerequisites
 
