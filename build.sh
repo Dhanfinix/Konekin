@@ -68,4 +68,7 @@ codesign --force --sign - "${RESOURCES_DIR}/adb"
 echo "Signing the app with entitlements..."
 codesign --force --deep --sign - --entitlements Entitlements.plist "${APP_BUNDLE}"
 
+# Force Finder to refresh the icon cache
+touch "${APP_BUNDLE}"
+
 echo "Build complete: ${APP_BUNDLE}"
