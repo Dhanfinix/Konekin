@@ -75,6 +75,10 @@ For the easiest installation, download the latest pre-built version:
 
 When using this tool, network activity from your mobile device is routed through your computer. On public or corporate networks, this traffic may be visible to network administrators. Please be mindful of your data privacy in such environments.
 
+## 🧪 Experimental Notice
+
+This project is a complete exploration of AI-driven software engineering. **Konekin** was built entirely through orchestration by **Dhanfinix** using the **Antigravity IDE**. Since the codebase is 100% machine-generated across various LLM models, the human orchestrator (Dhanfinix) accepts no responsibility for malfunctions, security gaps, or unexpected behavior. Use this experimental wrapper at your own risk.
+
 ## Credits
 
 - This app uses [Gnirehtet](https://github.com/Genymobile/gnirehtet) by Genymobile for the core reverse tethering functionality.
