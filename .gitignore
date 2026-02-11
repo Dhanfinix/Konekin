@@ -19,3 +19,7 @@ xcuserdata/
 .swiftpm/
 .build/
 Package.resolved
+
+# Web
+web/node_modules/
+web/dist/
