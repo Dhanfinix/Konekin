@@ -1,11 +1,18 @@
+# Konekin Landing Page
 
-  # Konekin Landing Page
+This is the landing page for Konekin, 100% AI-generated using Figma's AI-to-Code capabilities and orchestrated into this monorepo.
 
-  This is a code bundle for Konekin Landing Page. The original project is available at https://www.figma.com/design/pIMyYXFZdw4YTc17adyuXA/Konekin-Landing-Page.
+## 🚀 Deployment
+This site is automatically deployed to **GitHub Pages** via GitHub Actions whenever changes are pushed to the `main` branch.
 
-  ## Running the code
+**Live URL:** [https://dhanfinix.github.io/Konekin/](https://dhanfinix.github.io/Konekin/)
 
-  Run `npm i` to install the dependencies.
+## 🎨 Design Origin
+The original project design is available on [Figma](https://www.figma.com/design/pIMyYXFZdw4YTc17adyuXA/Konekin-Landing-Page).
 
-  Run `npm run dev` to start the development server.
+## 🛠️ Development
+Run the following commands from inside the `web/` directory:
+- `npm i` - Install dependencies
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
   
