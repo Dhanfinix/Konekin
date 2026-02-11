@@ -4,6 +4,8 @@
 
 # Konekin
 
+[![Project Site](https://img.shields.io/badge/Project-Site-emerald?style=flat-square)](https://dhanfinix.github.io/Konekin/)
+
 Konekin is a macOS menu bar application that simplifies reverse tethering for Android devices. It allows you to share your Mac's internet connection with your Android device via USB, powered by [Gnirehtet](https://github.com/Genymobile/gnirehtet).
 
 ## Features
